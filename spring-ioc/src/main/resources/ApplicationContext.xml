@@ -43,4 +43,15 @@
 
 <!--    </bean>-->
 
+
+    <!-- 一个类注入另一个类 -->
+    <!-- name是set方法的名字第一个字母小写 -->
+<!--    <bean id="userDao" class="com.fancy.dao.impl.UserDaoImpl">-->
+
+<!--    </bean>-->
+<!--    <bean id="userService" class="com.fancy.service.impl.UserServiceImpl">-->
+<!--        <property name="userDao" ref="userDao"/>-->
+<!--    </bean>-->
+
+
 </beans>

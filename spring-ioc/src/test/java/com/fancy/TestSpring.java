@@ -23,4 +23,11 @@ public class TestSpring {
         UserService userService = (UserService)app.getBean("userService");
         userService.save();
     }
+
+    @Test
+    public void testUserServiceShow(){
+        ApplicationContext app = new ClassPathXmlApplicationContext("ApplicationContext.xml");
+        UserService userService = (UserService)app.getBean("userService");
+        userService.show();
+    }
 }

@@ -65,4 +65,43 @@
 <!--    <bean id="userService" class="com.fancy.service.impl.UserServiceImpl">-->
 <!--        <constructor-arg name="userDao" ref="userDao"/>-->
 <!--    </bean>-->
+
+
+    <!-- 注入普通属性 & 集合属性 -->
+    <bean id="userService" class="com.fancy.service.impl.UserServiceImpl">
+        <property name="name" value="zhang"/>
+        <property name="age" value="18"/>
+        <!-- List注入 -->
+        <property name="strList">
+            <list>
+                <value>one</value>
+                <value>two</value>
+                <value>three</value>
+            </list>
+        </property>
+        <!-- Map注入 -->
+        <property name="userMap">
+            <map>
+                <entry key="one" value-ref="user1"/>
+                <entry key="two" value-ref="user2"/>
+            </map>
+        </property>
+        <!-- properties注入 -->
+        <property name="prop">
+            <props>
+                <prop key="one">Fancy</prop>
+                <prop key="two">Lucky</prop>
+                <prop key="three">Tom</prop>
+            </props>
+        </property>
+
+    </bean>
+    <bean id="user1" class="com.fancy.entity.User">
+        <property name="name" value="zhang"/>
+        <property name="addr" value="18"/>
+    </bean>
+    <bean id="user2" class="com.fancy.entity.User">
+        <property name="name" value="li"/>
+        <property name="addr" value="20"/>
+    </bean>
 </beans>

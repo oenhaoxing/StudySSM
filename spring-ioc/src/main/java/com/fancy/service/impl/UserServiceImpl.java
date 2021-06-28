@@ -12,6 +12,14 @@ public class UserServiceImpl implements UserService {
         this.userDao = userDao;
     }
 
+    // 构造方法注入
+    public UserServiceImpl(){
+
+    }
+    public UserServiceImpl(UserDao userDao){
+        this.userDao = userDao;
+    }
+
     @Override
     public void save() {
         userDao.save();

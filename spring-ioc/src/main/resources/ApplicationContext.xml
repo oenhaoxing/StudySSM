@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 注入IOC容器 无参构造方法注入 -->
+    <!--
+        id：唯一标识
+
+        class：注入类的全路径
+
+        scope：范围
+            singleton：单一对象
+                创建时间：加载配置文件 创建spring容器时创建
+            prototype：多个对象
+                创建时间：调用getBean时创建 创建新的对象实例
+
+        init-method：初始化方法
+
+        destroy-method：销毁方法
+     -->
+<!--    <bean id="userDao" class="com.fancy.dao.impl.UserDaoImpl" scope="singleton" init-method="init" destroy-method="destroy">-->
+
+<!--    </bean>-->
+
+
+    <!-- 注入IOC容器 工厂静态方法注入 -->
+    <!--
+        factory-method：静态方法名
+     -->
+<!--    <bean id="userDao" class="com.fancy.factory.StaticFactory" factory-method="getBean">-->
+
+<!--    </bean>-->
+
+
+    <!-- 注入IOC容器 工厂实例方法注入 -->
+    <!-- 先注入工厂 再配置从哪个对象里面的哪个方法获取实例 -->
+<!--    <bean id="factory" class="com.fancy.factory.DynamicFactory">-->
+
+<!--    </bean>-->
+<!--    <bean id="userDao" factory-bean="factory" factory-method="getBean">-->
+
+<!--    </bean>-->
+
+</beans>
